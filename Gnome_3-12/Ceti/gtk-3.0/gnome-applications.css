@@ -154,6 +154,10 @@ NautilusNotebook.notebook {
     background-color: @theme_base_color;
 }
 
+NautilusNotebook.notebook tab {
+    background-color: transparent;
+}
+
 NautilusNotebook .frame {
     border-width: 0;
 }
