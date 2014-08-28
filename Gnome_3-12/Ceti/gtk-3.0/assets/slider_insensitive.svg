@@ -14,7 +14,7 @@
    height="16"
    id="svg2985"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="slider_insensitive.svg">
   <defs
      id="defs2987">
@@ -32,38 +32,49 @@
     <linearGradient
        id="linearGradient3806">
       <stop
-         style="stop-color:#546272;stop-opacity:1;"
+         style="stop-color:#000000;stop-opacity:0.513089;"
          offset="0"
          id="stop3808" />
       <stop
-         style="stop-color:#2f3740;stop-opacity:1;"
+         style="stop-color:#000000;stop-opacity:0.59215689;"
          offset="1"
          id="stop3810" />
     </linearGradient>
     <linearGradient
        id="linearGradient3773">
       <stop
-         style="stop-color:#ffffff;stop-opacity:1"
+         style="stop-color:#fcfcfc;stop-opacity:1;"
          offset="0"
          id="stop3775" />
       <stop
          id="stop3769"
          offset="0.5"
-         style="stop-color:#f4f4f6;stop-opacity:1;" />
+         style="stop-color:#f9f9fb;stop-opacity:1;" />
       <stop
-         style="stop-color:#c8c8cd;stop-opacity:1"
+         style="stop-color:#dcdce0;stop-opacity:1;"
          offset="1"
          id="stop3777" />
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient3806"
-       id="linearGradient3812"
+       xlink:href="#linearGradient3806-1"
+       id="linearGradient3812-2"
        x1="8"
        y1="10"
        x2="8"
        y2="8"
        gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient3806-1">
+      <stop
+         style="stop-color:#3e90d4;stop-opacity:1;"
+         offset="0"
+         id="stop3808-3" />
+      <stop
+         style="stop-color:#2468a0;stop-opacity:1;"
+         offset="1"
+         id="stop3810-9" />
+    </linearGradient>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -72,19 +83,19 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="44.395603"
-     inkscape:cx="0.50359429"
-     inkscape:cy="7.2740037"
+     inkscape:zoom="32"
+     inkscape:cx="6.0957385"
+     inkscape:cy="7.5572344"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
-     showguides="true"
+     showguides="false"
      inkscape:guide-bbox="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1055"
+     inkscape:window-height="1035"
      inkscape:window-x="0"
-     inkscape:window-y="20"
+     inkscape:window-y="23"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -120,14 +131,24 @@
      inkscape:groupmode="layer">
     <path
        sodipodi:type="arc"
-       style="fill:#9ea3a8;fill-opacity:1"
+       style="opacity:0.75;fill:#000000;fill-opacity:0.15873018"
+       id="path3774"
+       sodipodi:cx="8"
+       sodipodi:cy="9"
+       sodipodi:rx="7"
+       sodipodi:ry="7"
+       d="M 15,9 A 7,7 0 1 1 1,9 7,7 0 1 1 15,9 z"
+       transform="translate(-1,-1)" />
+    <path
+       sodipodi:type="arc"
+       style="opacity:1;fill:#9ea3a8;fill-opacity:1"
        id="path3769"
        sodipodi:cx="8"
        sodipodi:cy="8"
        sodipodi:rx="7"
        sodipodi:ry="7"
        d="M 15,8 A 7,7 0 1 1 1,8 7,7 0 1 1 15,8 z"
-       transform="translate(-1,0)" />
+       transform="translate(-1,-1)" />
     <path
        sodipodi:type="arc"
        style="fill:#f1f1f2;fill-opacity:1"
@@ -137,16 +158,16 @@
        sodipodi:rx="6"
        sodipodi:ry="6"
        d="M 14,8 A 6,6 0 1 1 2,8 6,6 0 1 1 14,8 z"
-       transform="translate(-1,0)" />
+       transform="translate(-1,-1)" />
     <path
        sodipodi:type="arc"
-       style="opacity:0.3;fill:#343c44;fill-opacity:1"
-       id="path3783"
+       style="fill:#343c44;fill-opacity:1;opacity:0.3"
+       id="path3785"
        sodipodi:cx="8"
        sodipodi:cy="8"
-       sodipodi:rx="3"
-       sodipodi:ry="3"
-       d="M 11,8 A 3,3 0 1 1 5,8 3,3 0 1 1 11,8 z"
-       transform="translate(-1,0)" />
+       sodipodi:rx="2"
+       sodipodi:ry="2"
+       d="M 10,8 A 2,2 0 1 1 6,8 2,2 0 1 1 10,8 z"
+       transform="translate(-1,-1)" />
   </g>
 </svg>

@@ -21,7 +21,7 @@
 
 /* default text style */
 stage {
-    font-family: "Futura Bk BT";
+    font-family: "Cantarell";
     font-size: 9pt;
     color: #333333;
 }
@@ -537,7 +537,8 @@ StScrollBar StButton#vhandle:active {
 
 /* Common radii */
 
-#searchEntry {
+#searchEntry,
+.searchEntry {
     border-radius: 18px;
 }
 
@@ -563,6 +564,11 @@ StScrollBar StButton#vhandle:active {
 /* Entries */
 
 #searchEntry,
+#searchEntry:focus,
+#searchEntry:hover,
+.searchEntry,
+.searchEntry:focus,
+.searchEntry:hover,
 .login-dialog StEntry,
 .notification StEntry,
 .modal-dialog StEntry {
@@ -576,6 +582,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 #searchEntry,
+.searchEntry,
 .notification StEntry {
     border: 1px solid #434F5C;
     background-gradient-start: #4B525C;
@@ -594,8 +601,6 @@ StScrollBar StButton#vhandle:active {
     box-shadow: inset 0px 2px 4px rgba(0,0,0,0.2);
 }
 
-#searchEntry:focus,
-#searchEntry:hover,
 .login-dialog StEntry:focus,
 .modal-dialog StEntry {
     border: 1px solid #A6ACB4;
@@ -611,25 +616,30 @@ StScrollBar StButton#vhandle:active {
     border: 1px solid #3465a4;
 }
 
-#searchEntry {
+#searchEntry,
+.searchEntry {
     border-color: rgba(0,0,0,0.5);
     color: #98A4B5;
     caret-color: #98A4B5;
 }
 
-#searchEntry:hover {
+#searchEntry:hover,
+.searchEntry:hover {
     color: rgb(128, 128, 128);
     caret-color: rgb(128, 128, 128);
 }
 
 #searchEntry:focus,
-.notification StEntry:focus{
+#searchEntry:hover,
+.searchEntry:focus,
+.searchEntry:hover,
+.notification StEntry:focus {
     border-color: rgba(0,0,0,0.3);
     color: #E4E9ED;
     caret-color: #E4E9ED;
     background-gradient-start: #57606D;
     background-gradient-end: #838C9C;
-    font-weight: bold;
+    font-weight: normal;
     transition-duration: 300ms;
 }
 
@@ -664,7 +674,7 @@ StScrollBar StButton#vhandle:active {
 	border-image: url('panel.svg') 7 7 1 1;
     font-weight: bold;
 	/*text-shadow: 0px 0px white;*/
-    height: 20px;
+    height: 23px;
 }
 
 #panel.unlock-screen,
@@ -1019,7 +1029,8 @@ StScrollBar StButton#vhandle:active {
 }
 /* Search Box */
 
-#searchEntry {
+#searchEntry,
+.searchEntry {
     width: 320px;
 }
 
@@ -1030,7 +1041,9 @@ StScrollBar StButton#vhandle:active {
 }
 
 #searchEntry:hover .search-entry-icon,
-#searchEntry:focus .search-entry-icon {
+#searchEntry:focus .search-entry-icon,
+.searchEntry:hover .search-entry-icon,
+.searchEntry:focus .search-entry-icon {
     color: #E4E9ED;
 }
 
