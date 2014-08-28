@@ -1,0 +1,43 @@
+NautilusWindow .sidebar .view.cell:selected,
+NautilusWindow .sidebar .view.cell:selected:hover,
+NautilusWindow .sidebar .view.cell:selected:focus {
+	border-style: none;
+	/*background-image: url("arrow.png"),
+					  -gtk-gradient(linear, left top, left bottom,
+                                    from (shade(@theme_selected_bg_color, 1.1)),
+                                    to (shade(@theme_selected_bg_color, 0.9)));*/
+	background-position: right center, right center, top, bottom, right center;
+	background-repeat: no-repeat, no-repeat, repeat-x, repeat-x, repeat-x;
+    background-image: url("arrow_dark.png"),
+					  url("border.png"),
+					  url("top.png"),
+					  url("bottom.png"),
+					  url("menu-selected.svg");
+	box-shadow: none;
+}
+
+EvWindow .pane-separator, 
+EvWindow .pane-separator:hover {
+    border-width: 0px;
+	border-right-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    background-color: @dark_sidebar_bg;
+}
+
+NemoStatusBar.toolbar .scale.slider {
+    background-image: url("slider_dark.svg");
+}
+
+NemoStatusBar.toolbar .scale.slider:hover {
+    background-image: url("slider_hover_dark.svg");
+}
+
+NemoStatusBar.toolbar .scale.slider:active {
+    background-image: url("slider_active_dark.svg");
+}
+
+NemoStatusBar.toolbar .scale.highlight.left {
+    border-image: url("slider_trough_highlight_dark.svg") 3 5 4 5 / 3px 5px 4px 5px stretch;
+}
+

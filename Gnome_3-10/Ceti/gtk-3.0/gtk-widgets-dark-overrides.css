@@ -1,0 +1,231 @@
+* {
+    outline-color: alpha(@light_shadow, 0.4);
+}
+
+.button:hover {
+    background-image: -gtk-gradient(linear, 1 0 ,1 1,
+										color-stop(0.4, shade(@button_bg_top, 1.2)),
+										color-stop(1, shade(@button_bg_bottom, 1.2)));
+}
+
+.button:active:hover {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    to (shade(@button_bg_top, 1.1)),
+                                    from (shade(@button_bg_bottom, 1.05)));
+}
+
+.entry {
+	background-color: @theme_base_color; /*Fix for Abiword*/
+}
+
+.entry:active,
+.entry:focus {
+    background-image: none;
+	background-color: shade(@theme_base_color, 0.7);
+	box-shadow: inset  0px  1px 2px alpha(@dark_shadow, 0.3),
+				inset  0px  1px shade(@borders, 0.6),
+				inset  0px -1px shade(@borders, 0.6),
+				inset  1px  0px shade(@borders, 0.6),
+				inset -1px  0px shade(@borders, 0.6);
+}
+
+.header-bar .scale.trough,
+.primary-toolbar .scale.trough,
+.toolbar .scale.trough {
+    margin: 4px 0;
+	border: 1px solid transparent;
+	border-top-width: 0px;
+	border-bottom-color: @button_shadow;
+	border-radius: 5px;
+	background-image: none;
+	background-color: @theme_base_color;
+	box-shadow: inset 0px 1px 2px alpha(@dark_shadow, 0.2),
+				inset 0px 1px shade(@toolbar_bg_color, 0.6),
+				inset 0px -1px shade(@toolbar_bg_color, 0.6),
+				inset 1px 0px shade(@toolbar_bg_color, 0.6),
+				inset -1px 0px shade(@toolbar_bg_color, 0.6);
+}
+
+.notebook,
+.notebook tab.top:active,
+.notebook tab.right:active,
+.notebook tab.left:active,
+.notebook tab.bottom:active {
+    background-color: mix(@theme_bg_color, @theme_base_color, 0.7);
+	background-image: none;
+}
+
+.scrollbar.slider {
+	border-image: -gtk-scaled(url("assets/scrollbar-border-dark.svg")) 5 3 5 4 / 5px 3px 5px 4px stretch;
+}
+
+.scrollbar.slider.horizontal {
+	border-image: -gtk-scaled(url("assets/scrollbar-border-horizontal-dark.svg")) 4 5 3 5 / 4px 5px 3px 5px stretch;
+}
+
+.scrollbar.slider.horizontal:hover {
+	border-image: -gtk-scaled(url("assets/scrollbar-border-horizontal-hover-dark.svg"))  4 5 3 5 / 4px 5px 3px 5px stretch;
+}
+
+.scrollbar.slider.vertical:hover {
+	border-image: -gtk-scaled(url("assets/scrollbar-border-hover-dark.svg")) 5 3 5 4 / 5px 3px 5px 4px stretch;
+}
+
+.scrollbar.slider.horizontal:active {
+	background-image: -gtk-gradient(linear, left top, left bottom,
+                                     to (shade(@lighter_selected_bg, 1.0)),
+                                     from (shade(@theme_selected_bg_color, 1.0)));
+	border-image: -gtk-scaled(url("assets/scrollbar-border-horizontal-active-dark.svg"))  4 5 3 5 / 4px 5px 3px 5px stretch;
+}
+
+.scrollbar.slider.vertical:active {
+	background-image: -gtk-gradient(linear, left top, right top,
+                                     to (shade(@lighter_selected_bg, 1.0)),
+                                     from (shade(@theme_selected_bg_color, 1.0)));
+	border-image: -gtk-scaled(url("assets/scrollbar-border-active-dark.svg")) 5 3 5 4 / 5px 3px 5px 4px stretch;
+}
+
+.spinbutton .button:hover {
+	background-image: none;
+}
+
+.spinbutton .button:focus {
+    box-shadow: inset  1px  0px alpha(@dark_shadow, 0.2),
+				inset  0px -1px shade(@borders, 0.6),
+				inset  0px  1px shade(@borders, 0.6);
+}
+
+.spinbutton.vertical .button:hover {
+    background-image: -gtk-gradient(linear, 1 0 ,1 1,
+										color-stop(0.4, shade(@button_bg_top, 1.2)),
+										color-stop(1, shade(@button_bg_bottom, 1.2)));
+}
+
+.spinbutton.vertical .button:focus {
+	box-shadow: inset  0px  1px @button_border,
+				inset  0px -1px shade(@button_border, 1.05),
+				inset  1px  0px @button_border,
+				inset -1px  0px @button_border;
+}
+
+GtkComboBox.combobox-entry .entry:active,
+GtkComboBox.combobox-entry .entry:focus {
+	box-shadow:	inset  -1px  0px alpha(@dark_shadow, 0.2),
+
+				inset  0px -3px alpha(@dark_shadow, 0.02),
+				inset  0px -2px alpha(@dark_shadow, 0.03),
+				inset  0px -1px shade(@borders, 0.6),
+
+				inset  3px  0px alpha(@dark_shadow, 0.02),
+				inset  2px  0px alpha(@dark_shadow, 0.03),
+				inset  1px  0px shade(@borders, 0.6),
+
+ 				inset  0px  4px alpha(@dark_shadow, 0.03),
+ 				inset  0px  3px alpha(@dark_shadow, 0.04),
+ 				inset  0px  2px alpha(@dark_shadow, 0.05),
+				inset  0px  1px alpha(@dark_shadow, 0.06),
+				inset  0px  1px shade(@borders, 0.6);
+}
+
+.menu .menuitem:hover {
+    border-bottom-color: shade(@lighter_selected_bg, 1.1);
+    border-top-color: @theme_selected_bg_color;
+}
+
+.menuitem .accelerator {
+    color: alpha(@light_shadow, 0.8);
+}
+
+.progressbar {
+    border-image: -gtk-scaled(url("assets/progressbar_border_dark.svg")) 4 6 4 6 / 4px 6px 4px 6px stretch;
+}
+
+.progressbar.vertical {
+    border-image: -gtk-scaled(url("assets/progressbar_border_vertical_dark.svg")) 6 4 6 4 / 6px 4px 6px 4px stretch;
+}
+
+row:selected,
+row:selected:hover,
+row:selected:focus {
+	box-shadow: inset 0px -1px shade(@lighter_selected_bg, 1.1);
+}
+
+.scale {
+    padding: 0;
+    border-width: 1px;
+    border-radius: 5px;
+
+    -GtkRange-slider-width: 16px;
+    -GtkScale-slider-length: 14px;
+    -GtkRange-trough-border: 1;
+
+	border-image: -gtk-scaled(url("assets/slider_trough_highlight_dark.svg")) 3 5 4 5 / 3px 5px 4px 5px stretch;
+}
+
+.scale.slider {
+    background-image: url("assets/slider_dark.svg");
+}
+
+.scale.slider:hover {
+    background-image: url("assets/slider_hover_dark.svg");
+}
+
+.scale.slider:active:hover, 
+.scale.slider:active {
+	background-color: transparent;
+    background-image: url("assets/slider_active_dark.svg");
+}
+
+.scale.slider:insensitive {
+    background-image: url("assets/slider_insensitive_dark.svg");
+}
+
+.menubar .menuitem .scale.highlight.left,
+.scale.highlight.left {
+    border-image: -gtk-scaled(url("assets/slider_trough_highlight_dark.svg")) 3 5 4 5 / 3px 5px 4px 5px stretch;
+}
+
+.scale.highlight.bottom {
+    border-image: -gtk-scaled(url("assets/slider_trough_highlight_vertical_dark.svg")) 5 4 5 3 / 5px 4px 5px 3px stretch;
+}
+
+.scale.trough:insensitive {
+    background-color: @theme_bg_insensitive;
+    background-image: none;
+	box-shadow: none;
+	border-color: @borders_insensitive;
+	border-image: none;
+	border-width: 1px;
+}
+
+.header-bar .scale.trough:insensitive,
+.primary-toolbar .scale.trough:insensitive,
+.toolbar .scale.trough:insensitive {
+	background-color: shade(@toolbar_bg_color, 0.85);
+    background-image: none;
+	box-shadow: none;
+	box-shadow: inset 0px 1px 2px alpha(@dark_shadow, 0.2),
+				inset 0px 1px shade(@toolbar_bg_color, 0.5),
+				inset 0px -1px shade(@toolbar_bg_color, 0.5),
+				inset 1px 0px shade(@toolbar_bg_color, 0.5),
+				inset -1px 0px shade(@toolbar_bg_color, 0.5);
+	border-color: transparent;
+}
+
+.header-bar .scale.slider,
+.primary-toolbar .scale.slider,
+.toolbar .scale.slider {
+    background-image: url("assets/slider_toolbar_dark.svg");
+}
+
+.header-bar .scale.slider:hover,
+.primary-toolbar .scale.slider:hover,
+.toolbar .scale.slider:hover {
+    background-image: url("assets/slider_toolbar_hover_dark.svg");
+}
+
+.header-bar .scale.slider:insensitive,
+.primary-toolbar .scale.slider:insensitive,
+.toolbar .scale.slider:insensitive {
+    background-image: url("assets/slider_toolbar_insensitive_dark.svg");
+}

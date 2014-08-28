@@ -1,0 +1,39 @@
+###########################
+#      Requirements       #
+###########################
+
+* Gnome/GTK 3.8, 3.10 or 3.12
+* GTK3: gnome-themes-standard package or a package which contains the adwaita engine
+* GTK2: Murrine engine and pixbuf engine
+
+Please search in the repositories of your distribution because the package names vary from distro to distro.
+
+
+
+###########################
+#      Installation       #
+###########################
+
+The extracted zip file contains three different subfolders ("Gnome_3-8", "Gnome_3-10" and "Gnome_3-12") with the GTK themes for the different versions of Gnome/GTK. Pick the one that matches your version and copy the contents to "/usr/share/themes".
+Note: there is currently no Gnome-Shell theme for Gnome 3.8.
+
+To set the theme, run the following commands in Terminal,
+
+gsettings set org.gnome.desktop.interface gtk-theme "Ceti"
+gsettings set org.gnome.desktop.wm.preferences theme "Ceti"
+
+or just use gnome-tweak-tool
+
+For Gnome 3.8 and 3.10 you will need a fitting icon for the header-bar close button. Find the "window-close-symbolic.png" or "window-close-symbolic.svg" file in your icon theme and replace it with the one you find in the extracted zip file.
+
+The above step is not necessary with Gnome 3.12!
+
+To install the Chrome/Chromium theme open the "Chrome" folder in the extracted archive and drag and drop the Ceti.crx file into the Chrome/Chromium window.
+
+
+
+######################
+#      Credits       #
+######################
+
+Check- and radioboxes used in this theme are from http://www.deviantart.com/art/GTK3-Gnome-Shell-Faience-255097456 by tiheum

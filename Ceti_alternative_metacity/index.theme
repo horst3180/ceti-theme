@@ -1,0 +1,10 @@
+[X-GNOME-Metatheme]
+_Name=Ceti
+Type=X-GNOME-Metatheme
+_Comment=A nice theme
+Encoding=UTF-8
+GtkTheme=Ceti
+MetacityTheme=Ceti
+IconTheme=gnome
+CursorTheme=Adwaita
+CursorSize=24

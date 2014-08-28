@@ -1,0 +1,1494 @@
+/***********************
+ * fallback mode panel *
+ ***********************/
+PanelWidget,
+PanelApplet,
+PanelToplevel {
+    padding: 0;
+    background-color: @panel_bg_color;
+    background-image: none;
+    color: @panel_fg_color;
+}
+
+PanelApplet {
+    border-width: 0;
+}
+
+PanelSeparator {
+    border-width: 0;
+    background-color: @panel_bg_color;
+    background-image: none;
+    color: @panel_fg_color;
+}
+
+.gnome-panel-menu-bar,
+PanelApplet > GtkMenuBar.menubar,
+PanelApplet > GtkMenuBar.menubar.menuitem,
+PanelMenuBar.menubar,
+PanelMenuBar.menubar.menuitem {
+    -Panelpanel-icon-visible: true;
+
+    border-width: 0;
+    background-color: @panel_bg_color;
+    background-image: none;
+}
+
+PanelAppletFrame {
+    border-width: 0;
+    background-color: @panel_bg_color;
+    background-image: none;
+}
+
+PanelApplet .button {
+    -GtkButton-inner-border: 2px;
+
+    border-width: 0 1px;
+    border-radius: 0;
+    border-color: transparent;
+    background-color: @panel_bg_color;
+    background-image: none;
+    color: @panel_fg_color;
+}
+
+PanelApplet .button:active {
+    border-width: 0 1px;
+    border-radius: 0;
+    border-color: mix(@panel_bg_color, @panel_fg_color, 0.21);
+    background-color: mix(@panel_bg_color, @panel_fg_color, 0.21);
+    background-image: none;
+    color: shade(@panel_fg_color, 1.08);
+}
+
+PanelApplet .button:prelight {
+    border-color: mix(@panel_bg_color, @panel_fg_color, 0.11);
+    background-color: mix(@panel_bg_color, @panel_fg_color, 0.11);
+    background-image: none;
+    color: shade(@panel_fg_color, 1.08);
+}
+
+PanelApplet .button:active:prelight {
+    border-color: mix(@panel_bg_color, @panel_fg_color, 0.31);
+    background-color: mix(@panel_bg_color, @panel_fg_color, 0.31);
+    background-image: none;
+    color: shade(@panel_fg_color, 1.08);
+}
+
+WnckPager, WnckTasklist {
+    background-color: @panel_bg_color;
+}
+
+/************
+ * nautilus *
+ ************/
+.nautilus-canvas-item {
+    border-radius: 2px;
+}
+
+.nautilus-desktop.nautilus-canvas-item {
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active {
+    color: @theme_fg_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:selected {
+    color: @theme_selected_fg_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active,
+.nautilus-desktop.nautilus-canvas-item:prelight,
+.nautilus-desktop.nautilus-canvas-item:selected {
+    text-shadow: none;
+}
+
+NautilusWindow .sidebar .view.cell:selected,
+NautilusWindow .sidebar .view.cell:selected:hover,
+NautilusWindow .sidebar .view.cell:selected:focus {
+	border-style: none;
+	/*background-image: url("arrow.png"),
+					  -gtk-gradient(linear, left top, left bottom,
+                                    from (shade(@theme_selected_bg_color, 1.1)),
+                                    to (shade(@theme_selected_bg_color, 0.9)));*/
+	background-position: right center, right center, top, bottom, right center;
+	background-repeat: no-repeat, no-repeat, repeat-x, repeat-x, repeat-x;
+    background-image: url("arrow.png"),
+					  url("border.png"),
+					  url("top.png"),
+					  url("bottom.png"),
+					  url("menu-selected.svg");
+    /*box-shadow: inset  0px  1px shade(@theme_selected_bg_color, 1.2),
+				inset  0px -1px shade(@theme_selected_bg_color, 1.0);*/
+	box-shadow: none;
+}
+
+NautilusWindow .sidebar .view.cell:hover {
+	color: shade(@toolbar_fg_color, 1.4);
+}
+
+NautilusWindow .sidebar .frame {
+    border: none;
+}
+
+NautilusWindow .sidebar .view {
+    background-color: @dark_sidebar_bg;
+	color: @toolbar_fg_color;
+    box-shadow: inset  -1px 0px shade(@toolbar_bg_color, 0.6);
+}
+
+NautilusWindow .sidebar .scrollbar.trough {
+    border-width: 0;
+    background-image: -gtk-gradient(linear, left top, right top,
+                                     from (@theme_base_color),
+                                     to (@theme_base_color));
+}
+
+NautilusWindow * {
+	-GtkPaned-handle-size: 0;
+}
+
+NautilusWindow .header-bar {
+    padding: 4px 7px 4px 5px;
+}
+
+/*
+NautilusWindow > GtkGrid > .pane-separator,
+NautilusWindow > GtkGrid > .pane-separator:hover {
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-color: @base_color;
+    background-color: @theme_bg_color;
+    background-image: url("assets/null.png");
+}
+*/
+NautilusNotebook.notebook {
+    border-right-width: 0;
+    border-left-width: 0;
+    border-bottom-width: 0;
+}
+
+NautilusNotebook .frame {
+    border-width: 0;
+}
+
+NautilusQueryEditor .primary-toolbar.toolbar {
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+NautilusQueryEditor .toolbar {
+    padding-top: 3px;
+    padding-bottom: 2px;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: @toolbar_bg_color;
+    background-color: shade(@toolbar_bg_color, 0.9);
+}
+
+NautilusQueryEditor .toolbar:nth-child(2) {
+    border-color: shade(@toolbar_bg_color, 0.8);
+}
+
+NautilusQueryEditor .toolbar:last-child,
+NautilusQueryEditor .primary-toolbar.toolbar:only-child {
+    border-bottom-width: 1px;
+    border-bottom-color: shade(@toolbar_bg_color, 0.8);
+}
+
+.toolbar NautilusPathBar.linked .button,
+.toolbar NautilusPathBar.linked .button:hover,
+.header-bar NautilusPathBar.linked .button,
+.header-bar NautilusPathBar.linked .button:hover {
+	background-color: @toolbar_entry;
+	border-width: 1px 0px 1px 0px;
+	border-radius: 0px;
+    border-color: shade(@toolbar_bg_color, 1.3);
+	border-top-color: transparent;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (@toolbar_entry_top),
+                                     to (@toolbar_entry_bottom));
+    box-shadow: inset -1px  0px shade(@toolbar_entry_top, 0.8),	
+				inset  0px  1px shade(@toolbar_bg_color, 0.6),
+				inset  0px -1px shade(@toolbar_bg_color, 0.7),
+				inset  0px 2px 2px alpha(@dark_shadow, 0.2);
+	color: shade(@toolbar_fg_color, 1.0);
+}
+
+.toolbar NautilusPathBar.linked .button:hover,
+.header-bar NautilusPathBar.linked .button:hover {
+	color: shade(@theme_selected_bg_color, 1.5);
+}
+
+.toolbar NautilusPathBar.linked .button:active,
+.header-bar NautilusPathBar.linked .button:active {
+	background-color: @toolbar_entry;
+	border-width: 1px 0px 1px 0px;
+	border-radius: 0px;
+    border-color: shade(@toolbar_bg_color, 1.3);
+	border-top-color: transparent;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@toolbar_entry_top,0.85)),
+                                     to (shade(@toolbar_entry_bottom, 0.85)));
+    box-shadow: inset -1px  0px shade(@toolbar_entry_top, 0.8),	
+				inset  0px  1px shade(@toolbar_bg_color, 0.6),
+				inset  0px -1px shade(@toolbar_bg_color, 0.7),
+				inset  0px 2px 2px alpha(@dark_shadow, 0.4);
+	color: shade(@theme_selected_bg_color, 1.5);
+}
+
+.toolbar NautilusPathBar.linked .button:active:hover,
+.header-bar NautilusPathBar.linked .button:active:hover {
+	color: shade(@theme_selected_bg_color, 1.7);
+}
+
+.toolbar NautilusPathBar.linked .button:first-child,
+.toolbar NautilusPathBar.linked .button:first-child:hover,
+.header-bar NautilusPathBar.linked .button:first-child,
+.header-bar NautilusPathBar.linked .button:first-child:hover {
+	background-color: @toolbar_entry;
+	border-width: 1px 0px 1px 0px;
+	border-radius: 4px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+    border-color: shade(@toolbar_bg_color, 1.3);
+	border-top-color: transparent;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (@toolbar_entry_top),
+                                     to (@toolbar_entry_bottom));
+    box-shadow: inset  1px  0px shade(@toolbar_bg_color, 0.6),
+				inset -1px  0px shade(@toolbar_entry_top, 0.8),
+				inset  0px  1px shade(@toolbar_bg_color, 0.6),
+				inset  0px -1px shade(@toolbar_bg_color, 0.7),
+				inset  0px 2px 2px alpha(@dark_shadow, 0.2);
+	color: shade(@toolbar_fg_color, 1.0);
+}
+
+.toolbar NautilusPathBar.linked .button:first-child:hover,
+.header-bar NautilusPathBar.linked .button:first-child:hover {
+	color: shade(@theme_selected_bg_color, 1.5);
+} 
+
+.toolbar NautilusPathBar.linked .button:first-child:active,
+.header-bar NautilusPathBar.linked .button:first-child:active {
+	background-color: @toolbar_entry;
+	border-width: 1px 0px 1px 0px;
+	border-radius: 4px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+    border-color: shade(@toolbar_bg_color, 1.3);
+	border-top-color: transparent;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@toolbar_entry_top,0.85)),
+                                     to (shade(@toolbar_entry_bottom, 0.85)));
+    box-shadow: inset  1px  0px shade(@toolbar_bg_color, 0.6),
+				inset -1px  0px shade(@toolbar_entry_top, 0.8),
+				inset  0px  1px shade(@toolbar_bg_color, 0.6),
+				inset  0px -1px shade(@toolbar_bg_color, 0.7),
+				inset  0px 2px 2px alpha(@dark_shadow, 0.2);
+	color: shade(@theme_selected_bg_color, 1.5);
+} 
+
+.toolbar NautilusPathBar.linked .button:first-child:active:hover,
+.header-bar NautilusPathBar.linked .button:first-child:active:hover {
+	color: shade(@theme_selected_bg_color, 1.7);
+}
+
+.toolbar NautilusPathBar.linked .button:last-child,
+.toolbar NautilusPathBar.linked .button:last-child:hover,
+.header-bar NautilusPathBar.linked .button:last-child,
+.header-bar NautilusPathBar.linked .button:last-child:hover {
+	background-color: @toolbar_entry;
+	border-width: 1px 0px 1px 0px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 4px;
+    border-color: shade(@toolbar_bg_color, 1.3);
+	border-top-color: transparent;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (@toolbar_entry_top),
+                                     to (@toolbar_entry_bottom));
+    box-shadow: inset -1px  0px shade(@toolbar_bg_color, 0.6),
+				inset  0px  1px shade(@toolbar_bg_color, 0.6),
+				inset  0px -1px shade(@toolbar_bg_color, 0.7),
+				inset  0px 2px 2px alpha(@dark_shadow, 0.2);
+	color: shade(@toolbar_fg_color, 1.0);
+}
+
+.toolbar NautilusPathBar.linked .button:last-child:hover,
+.header-bar NautilusPathBar.linked .button:last-child:hover {
+	color: shade(@theme_selected_bg_color, 1.5);
+}
+
+.toolbar NautilusPathBar.linked .button:last-child:active,
+.header-bar NautilusPathBar.linked .button:last-child:active {
+	background-color: @toolbar_entry;
+	border-width: 1px 0px 1px 0px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 4px;
+    border-color: shade(@toolbar_bg_color, 1.3);
+	border-top-color: transparent;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@toolbar_entry_top,0.85)),
+                                     to (shade(@toolbar_entry_bottom, 0.85)));
+    box-shadow: inset -1px  0px shade(@toolbar_bg_color, 0.6),
+				inset  0px  1px shade(@toolbar_bg_color, 0.6),
+				inset  0px -1px shade(@toolbar_bg_color, 0.7),
+				inset  0px 2px 2px alpha(@dark_shadow, 0.2);
+	color: shade(@theme_selected_bg_color, 1.5);
+}
+
+.toolbar NautilusPathBar.linked .button:last-child:active:hover,
+.header-bar NautilusPathBar.linked .button:last-child:active:hover {
+	color: shade(@theme_selected_bg_color, 1.7);
+}
+
+.toolbar NautilusPathBar.linked .button:active:only-child,
+.header-bar NautilusPathBar.linked .button:active:only-child {
+	padding-bottom: 0;
+    border-color: shade(@toolbar_bg_color, 1.3);
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (@toolbar_entry_top),
+                                     to (@toolbar_entry_bottom));
+	border-width: 0px 0px 1px 0px;
+	border-radius: 4px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+    box-shadow: inset  1px  0px shade(@toolbar_bg_color, 0.6),
+				inset -1px  0px shade(@toolbar_bg_color, 0.6),
+				inset  0px  1px shade(@toolbar_bg_color, 0.6),
+				inset  0px -1px shade(@toolbar_bg_color, 0.7),
+				inset  0px 2px 2px alpha(@dark_shadow, 0.2),
+				inset  0px -2px 1px alpha(@light_shadow, 0.08);
+	color: shade(@toolbar_fg_color, 1.0);
+	icon-shadow: inset 0 1px 1px alpha(@dark_shadow, 0.2);
+}
+
+NautilusWindow .notebook {
+    border-width: 0;
+	border-top-width: 1px;
+    border-style: solid;
+}
+/*
+NautilusWindow .header-bar {
+	padding: 4px;
+}
+*/
+NautilusWindow .header-bar .entry {
+	padding-bottom: 4px;
+}
+
+NautilusWindow .notebook {
+    -GtkNotebook-initial-gap: 10;
+}
+
+NautilusWindow .notebook tab:active {
+    box-shadow: none;
+}
+
+NautilusWindow .notebook tab:first-child,
+NautilusWindow .notebook tab:first-child:active {
+    border-left-width: 0;
+}
+
+NautilusWindow .notebook tab:last-child,
+NautilusWindow .notebook tab:last-child:active {
+    border-right-width: 0;
+}
+NautilusSearchBar.info {
+	background-color: #ff0000;
+	background-image: none;
+}
+/******************
+ * gnome terminal *
+ ******************/
+VteTerminal {
+    background-color: @osd_base;
+    color: @osd_fg;
+}
+
+TerminalWindow GtkNotebook.notebook {
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+TerminalWindow .scrollbars-junction,
+TerminalWindow .scrollbar.trough {
+    background-color: @osd_base;
+	background-image: none;
+	border-color: @osd_base;
+}
+
+TerminalWindow .scrollbar.button,
+TerminalWindow .scrollbar.button:active,
+TerminalWindow .scrollbar.button:active:hover {
+    color: shade(@osd_base, 0.6);
+}
+
+TerminalWindow .scrollbar.slider {
+	border-image: url("scrollbar-border-dark.svg") 5 3 5 4 / 5px 3px 5px 4px stretch;
+	background-image: -gtk-gradient(linear, left top, right top,
+                                     to (shade(@osd_scrollbar_slider, 1.2)),
+                                     from (shade(@osd_scrollbar_slider, 1.0)));
+}
+
+TerminalWindow .scrollbar.slider.vertical:hover {
+	border-image: url("scrollbar-border-hover-dark.svg") 5 3 5 4 / 5px 3px 5px 4px stretch;
+	background-image: -gtk-gradient(linear, left top, right top,
+                                     to (shade(@osd_scrollbar_slider, 1.4)),
+                                     from (shade(@osd_scrollbar_slider, 1.2)));
+}
+
+TerminalWindow .scrollbar.slider.vertical:active {
+	border-image: url("scrollbar-border-active-dark.svg") 5 3 5 4 / 5px 3px 5px 4px stretch;
+	background-image: -gtk-gradient(linear, left top, right top,
+                                     to (shade(@lighter_selected_bg, 1.0)),
+                                     from (shade(@theme_selected_bg_color, 1.0)));
+}
+
+/*********
+ * gedit *
+ *********/
+GeditWindow *{
+	-GtkPaned-handle-size: 1;
+}
+GeditWindow .pane-separator, 
+GeditWindow .pane-separator:hover {
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: @borders;
+    background-color: @borders;
+    /*color: shade(@toolbar_bg_color, 0.6);*/
+}
+
+GeditPanel.title GtkLabel {
+    padding: 4px 0;
+}
+
+GeditPanel.vertical .title {
+    padding: 4px 0 4px 3px;
+    border-style: none;
+}
+
+GeditPanel .toolbar {
+    border-style: none;
+    background-color: transparent;
+}
+
+GeditDocumentsPanel .view {
+    background-color: @theme_base_color;
+}
+
+GeditPanel.vertical .notebook {
+    padding: 0;
+    border-width: 1px 0;
+}
+
+GeditPanel.horizontal .notebook {
+    padding: 0;
+    border-width: 0 1px 1px 0;
+}
+
+GeditStatusComboBox .button,
+GeditStatusComboBox .button:hover,
+GeditStatusComboBox .button:active,
+GeditStatusComboBox .button:active:hover {
+    padding: 1px 6px 2px 4px;
+    border-style: solid;
+    border-width: 0 1px;
+    border-radius: 0;
+}
+
+GeditStatusComboBox .button:hover,
+GeditStatusComboBox .button:active,
+GeditStatusComboBox .button:active:hover {
+    border-color: @borders;
+}
+
+GeditViewFrame .gedit-search-slider {
+    padding: 2px;
+    border-radius: 0 0 4px 4px;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: @borders;
+    background-color: @theme_base_color;
+}
+
+
+GeditViewFrame .gedit-search-slider .not-found {
+    background-color: @error_bg_color;
+    background-image: none;
+    color: @error_fg_color;
+}
+
+GeditViewFrame .gedit-search-slider .not-found:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+.gedit-search-entry-occurrences-tag {
+    color: alpha(@theme_fg_color, 0.6);
+    margin: 2px;
+    padding: 2px;
+}
+
+GeditFileBrowserWidget .primary-toolbar.toolbar  {
+    padding: 2px;
+    border-top: none;
+    background-image: none;
+}
+
+GeditWindow .notebook {
+	border-width: 0px;
+    border-top-width: 1px;
+	border-bottom-width: 1px;
+}
+
+GeditStatusComboBox {
+	background-image: none;
+}
+
+/***************
+ * font-viewer *
+ ***************/
+SushiFontWidget {
+    padding: 6px 12px;
+}
+
+/*************
+ * gucharmap *
+ *************/
+GucharmapChartable {
+    background-color: @theme_base_color;
+}
+
+GucharmapChartable:active,
+GucharmapChartable:focus,
+GucharmapChartable:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+/************
+ * epiphany *
+ ************/
+EphyToolbar .button {
+    transition: background 300ms ease-out;
+    outline-color: alpha(@toolbar_fg_color, 0.40);
+}
+
+EphyToolbar .entry:first-child {
+    border-right-width: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+    box-shadow: inset  1px  0px shade(@toolbar_bg_color, 0.6),
+				inset -1px  0px shade(@toolbar_bg_color, 0.6),
+				inset  0px  1px shade(@toolbar_bg_color, 0.6),
+				inset  0px -1px shade(@toolbar_bg_color, 0.7),
+				inset  0px 2px 2px alpha(@dark_shadow, 0.2),
+				inset  0px -2px 1px alpha(@light_shadow, 0.08);
+
+}
+
+EphyToolbar .entry:last-child,
+EphyToolbar .entry:focus:last-child {
+    border-left-width: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+EphyToolbar .entry {
+    border-color: shade(@toolbar_bg_color, 1.3);
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (@toolbar_entry_top),
+                                     to (@toolbar_entry_bottom));
+	border-width: 0px 0px 1px 0px;
+	border-radius: 4px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+    box-shadow: inset  1px  0px shade(@toolbar_bg_color, 0.6),
+				inset -1px  0px shade(@toolbar_bg_color, 0.6),
+				inset  0px  1px shade(@toolbar_bg_color, 0.6),
+				inset  0px -1px shade(@toolbar_bg_color, 0.7),
+				inset  0px 2px 2px alpha(@dark_shadow, 0.2),
+				inset  0px -2px 1px alpha(@light_shadow, 0.08);
+	color: shade(@toolbar_fg_color, 1.0);
+    transition: background 300ms ease-out;
+}
+
+
+EphyToolbar .entry:focus,
+EphyToolbar .entry:focus:first-child {
+	color: @theme_selected_fg_color;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@toolbar_entry_top, 1.2)),
+                                     to (shade(@toolbar_entry_bottom, 1.2)));
+    transition: background 300ms ease-out;
+}
+
+EphyToolbar .entry:focus:last-child {
+    box-shadow: none;
+}
+
+EphyToolbar .location-entry .button {
+    color: @toolbar_fg_color;
+    -GtkButton-child-displacement-y: 0;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+    border-radius: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+	border-color: transparent;
+    border-bottom-color: shade(@toolbar_bg_color, 1.3);
+	box-shadow: none;
+
+}
+
+EphyToolbar .location-entry .button:last-child {
+	border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    box-shadow:	inset -1px  0px shade(@toolbar_bg_color, 0.6),
+				inset  0px  1px shade(@toolbar_bg_color, 0.6),
+				inset  0px -1px shade(@toolbar_bg_color, 0.7),
+				inset  0px 2px 2px alpha(@dark_shadow, 0.2),
+				inset  0px -2px 1px alpha(@light_shadow, 0.08);
+}
+
+EphyToolbar .location-entry .button:last-child:insensitive {
+    box-shadow:	inset -1px  0px shade(@toolbar_bg_color, 0.6),
+				inset  0px  1px shade(@toolbar_bg_color, 0.6),
+				inset  0px -1px shade(@toolbar_bg_color, 0.7);
+}
+
+EphyToolbar .location-entry .button:first-child {
+	border-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow:	inset  1px  0px shade(@toolbar_bg_color, 0.6),
+				inset  0px  1px shade(@toolbar_bg_color, 0.6),
+				inset  0px -1px shade(@toolbar_bg_color, 0.7),
+				inset  0px 2px 2px alpha(@dark_shadow, 0.2),
+				inset  0px -2px 1px alpha(@light_shadow, 0.08);
+}
+
+EphyToolbar .location-entry .button,
+EphyToolbar .location-entry .button:hover,
+EphyToolbar .location-entry .button:focus {
+	border-width: 0px 0px 1px 0px;
+    icon-shadow: none;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (@toolbar_entry_top),
+                                     to (@toolbar_entry_bottom));
+}
+
+EphyToolbar .location-entry .button:active,
+EphyToolbar .location-entry .button:active:hover {
+}
+
+EphyToolbar .location-entry .button:hover,
+EphyToolbar .location-entry .button:active {
+    color: shade(@theme_selected_bg_color, 1.3);
+}
+
+EphyNotebook.notebook {
+    border-width: 1px 0 0px 0;
+}
+
+EphyNotebook.notebook tab {
+    border-width: 0;
+}
+
+EphyToolbar  .button,
+EphyToolbar .button:focus {
+    border-color: @toolbar_button_border;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+    border-width: 1px;
+    background-color: shade(@toolbar_bg_color, 0.85);
+    border-radius: 4px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+    color: @toolbar_fg_color;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (@toolbar_button_top),
+                                     to (@toolbar_button_bottom));
+
+    box-shadow: inset  0px  2px shade(@toolbar_button_highlight, 1.05),
+				/*inset  0px -2px shade(@toolbar_button_bottom, 1.2),
+				inset  2px  0px shade(@toolbar_button_highlight, 0.8),
+				inset -2px  0px shade(@toolbar_button_highlight, 0.8),*/
+				inset  1px  0px shade(@toolbar_bg_color, 0.7),
+				inset -1px  0px shade(@toolbar_bg_color, 0.7),
+				inset  0px  1px shade(@toolbar_bg_color, 0.7),
+				inset  0px -1px shade(@toolbar_bg_color, 0.7);
+}
+
+EphyToolbar  .button:hover {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@toolbar_button_top, 1.2)),
+                                     to (shade(@toolbar_button_bottom, 1.0)));
+    box-shadow: inset  0px  2px shade(@toolbar_button_highlight, 1.2),
+				/*inset  0px  -2px shade(@toolbar_button_bg, 0.95),
+				inset  2px  0px shade(@toolbar_button_bg, 1.2),
+				inset -2px  0px shade(@toolbar_button_bg, 1.2),*/
+				inset  1px  0px shade(@toolbar_bg_color, 0.75),
+				inset -1px  0px shade(@toolbar_bg_color, 0.75),
+				inset  0px  1px shade(@toolbar_bg_color, 0.75),
+				inset  0px -1px shade(@toolbar_bg_color, 0.75);
+}
+
+#ephy-page-menu-button.active-menu,
+EphyToolbar .button:active,
+EphyToolbar .button:active:focus,
+EphyToolbar .button:active:hover:focus {
+	color: shade(@theme_selected_bg_color, 1.5);
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     to (shade(@toolbar_button_top, 0.8)),
+                                     from (shade(@toolbar_button_bottom, 0.8)));
+    box-shadow: inset  1px  0px shade(@toolbar_bg_color, 0.75),
+				inset -1px  0px shade(@toolbar_bg_color, 0.75),
+				inset  0px  1px shade(@toolbar_bg_color, 0.75),
+				inset  0px -1px shade(@toolbar_bg_color, 0.75),
+
+				inset  0px  1px 2px alpha(@dark_shadow, 0.5);
+}
+
+EphyToolbar  .button:insensitive {
+	background-image: none;
+	background-color: shade(@toolbar_bg_color, 0.8);
+    box-shadow: inset  0px  1px shade(@toolbar_bg_color, 0.65),
+				inset  0px -1px shade(@toolbar_bg_color, 0.65),
+				inset  1px  0px shade(@toolbar_bg_color, 0.65),
+				inset -1px  0px shade(@toolbar_bg_color, 0.65);
+}
+
+EphyToolbar .linked .button:first-child {
+	color: @toolbar_fg_color;
+    border-width: 1px;
+    border-bottom-color: shade(@toolbar_bg_color, 1.3);
+	border-right-width: 1px;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: shade(@toolbar_bg_color, 0.8);
+    border-radius: 4px;
+	border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+	background-image: none;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (@toolbar_button_top),
+                                     to (@toolbar_button_bottom));
+
+    box-shadow: inset  0px  2px shade(@toolbar_button_highlight, 1.05),
+				inset  1px  0px shade(@toolbar_bg_color, 0.7),
+				inset  0px  1px shade(@toolbar_bg_color, 0.7),
+				inset  0px -1px shade(@toolbar_bg_color, 0.7);
+}
+
+EphyToolbar .linked .button:hover:first-child {
+	border-right-width: 1px;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@toolbar_button_top, 1.2)),
+                                     to (shade(@toolbar_button_bottom, 1.0)));
+
+    box-shadow: inset  0px  2px shade(@toolbar_button_highlight, 1.2),
+				inset  1px  0px shade(@toolbar_bg_color, 0.75),
+				inset  0px  1px shade(@toolbar_bg_color, 0.75),
+				inset  0px -1px shade(@toolbar_bg_color, 0.75);
+}
+
+EphyToolbar .linked .button:active:hover:first-child {
+	border-right-width: 1px;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     to (shade(@toolbar_button_top, 0.8)),
+                                     from (shade(@toolbar_button_bottom, 0.8)));
+    box-shadow:	inset  1px  0px shade(@toolbar_bg_color, 0.75),
+				inset  0px  1px shade(@toolbar_bg_color, 0.75),
+				inset  0px -1px shade(@toolbar_bg_color, 0.75),
+
+				inset  0px  1px 2px alpha(@dark_shadow, 0.5);
+}
+
+EphyToolbar .linked .button:insensitive:first-child {
+	background-image: none;
+	background-color: shade(@toolbar_bg_color, 0.8);
+	border-right-color: shade(@toolbar_bg_color, 0.7);
+    box-shadow: inset  1px  0px 	shade(@toolbar_bg_color, 0.65),
+				inset  0px  1px 	shade(@toolbar_bg_color, 0.65),
+				inset  0px -1px 	shade(@toolbar_bg_color, 0.65);
+}
+
+EphyToolbar .linked .button:last-child {
+	color: @toolbar_fg_color;
+    border-width: 1px;
+    border-left-width: 0;
+    border-color: shade(@toolbar_bg_color, 1.3);
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+    border-radius: 4px;
+	border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (@toolbar_button_top),
+                                     to (@toolbar_button_bottom));
+
+    box-shadow: inset  0px  2px shade(@toolbar_button_highlight, 1.05),
+				inset -1px  0px shade(@toolbar_bg_color, 0.7),
+				inset  0px  1px shade(@toolbar_bg_color, 0.7),
+				inset  0px -1px shade(@toolbar_bg_color, 0.7);
+}
+
+EphyToolbar .linked .button:hover:last-child {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@toolbar_button_top, 1.2)),
+                                     to (shade(@toolbar_button_bottom, 1.0)));
+
+    box-shadow: inset  0px  2px shade(@toolbar_button_highlight, 1.2),
+				inset -1px  0px shade(@toolbar_bg_color, 0.75),
+				inset  0px  1px shade(@toolbar_bg_color, 0.75),
+				inset  0px -1px shade(@toolbar_bg_color, 0.75);
+}
+
+EphyToolbar .linked .button:active:hover:last-child {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     to (shade(@toolbar_button_top, 0.8)),
+                                     from (shade(@toolbar_button_bottom, 0.8)));
+    box-shadow:	inset -1px  0px shade(@toolbar_bg_color, 0.75),
+				inset  0px  1px shade(@toolbar_bg_color, 0.75),
+				inset  0px -1px shade(@toolbar_bg_color, 0.75),
+
+				inset  0px  1px 2px alpha(@dark_shadow, 0.5);
+}
+
+EphyToolbar .linked .button:insensitive:last-child {
+	background-image: none;
+	background-color: shade(@toolbar_bg_color, 0.8);
+    box-shadow: inset -1px  0px 	shade(@toolbar_bg_color, 0.65),
+				inset  0px  1px 	shade(@toolbar_bg_color, 0.65),
+				inset  0px -1px 	shade(@toolbar_bg_color, 0.65);
+}
+
+EphyOverview GtkScrolledWindow {
+    background-color: @theme_base_color;
+}
+
+EphyOverview GtkScrolledWindow:backdrop {
+    background-color: @theme_unfocused_base_color;
+}
+
+EphyWindow .trough {
+	box-shadow: none;
+}
+
+/* sets top and bottom borders on the main scrolled window for toolbar visual
+ * division and search/downloadbar */
+EphyWindow.background EphyEmbed.vertical GtkScrolledWindow.frame {
+    border-color: red;
+    border-width: 1px 0;
+    border-radius: 0;
+}
+
+/* removes any border from the overview scrolled window, since it's overlaid */
+EphyWindow.background EphyEmbed.vertical EphyOverview .documents-scrolledwin {
+    border-style: none;
+}
+
+/* remove top and bottom borders from the main scrolled window when inside a notebook tab */
+EphyWindow.background EphyNotebook.notebook EphyEmbed.vertical GtkScrolledWindow {
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+/* remove bottom borders from the  main scrolled window when no bars at the bottom of the screen are shown */
+EphyWindow.background EphyEmbed.vertical GtkScrolledWindow,
+EphyWindow.background  {
+    border-bottom-width: 0;
+}
+
+
+/*************
+ * rhythmbox *
+ *************/
+
+/*RBEntryView .view {
+	background-image: none;
+	background-color: #ff0000;
+
+}
+
+RBLibraryBrowser .view {
+	background-color: #0000ff;
+}*/
+RBSource .toolbar .button {
+	padding-top: 1px;
+	color: @theme_fg_color;
+	text-shadow: none;
+	border-color: transparent;
+	border-bottom-color: @button_shadow;
+	box-shadow: none;
+    transition: none;
+
+}
+RBSource .toolbar .button:active {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    to (shade(@button_bg_top, 0.98)),
+                                    from (shade(@button_bg_bottom, 0.90)));
+	box-shadow: inset  0px  -1px 3px alpha(@dark_shadow, 0.3),
+				inset  0px  1px shade(@button_border, 0.9),
+				inset  0px -1px shade(@button_border, 0.9),
+				inset  1px  0px shade(@button_border, 0.9),
+				inset -1px  0px shade(@button_border, 0.9);
+	color: @theme_fg_color;
+}
+
+RBSource .toolbar .button:hover {
+    background-image: -gtk-gradient(linear, 1 0 ,1 1,
+										color-stop(0.3, shade(@button_bg_top, 1.0)),
+										color-stop(1, shade(@button_bg_bottom, 0.90)));
+	box-shadow: inset  0px  1px @button_border,
+				inset  0px -1px shade(@button_border, 0.85),
+				inset  1px  0px @button_border,
+				inset -1px  0px @button_border;
+}
+
+RBSource .toolbar .button:active:hover {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    to (shade(@button_bg_top, 1.0)),
+                                    from (shade(@button_bg_bottom, 0.95)));
+	box-shadow: inset  0px  -1px 3px alpha(@dark_shadow, 0.3),
+				inset  0px  1px shade(@button_border, 0.9),
+				inset  0px -1px shade(@button_border, 0.9),
+				inset  1px  0px shade(@button_border, 0.9),
+				inset -1px  0px shade(@button_border, 0.9);
+	color: shade(@theme_fg_color, 0.7);
+}
+
+RBSource .toolbar .separator {
+	color: transparent;
+}
+
+/*Evince*/
+EvWindow GtkWidget {
+	background-color: @dark_sidebar_bg;
+	border-width: 0;
+}
+
+EvWindow.background EvSidebar.vertical .menu *{
+	background-color: @menu_bg_color;
+}
+
+EvWindow.background EvSidebar.vertical .menu * GtkLabel,
+EvWindow.background EvSidebar.vertical * GtkLabel, 
+EvWindow.background EvSidebar.vertical * GtkImage {
+	background-color: transparent;
+}
+
+EvWindow GtkLabel,
+EvWindow GtkImage {
+	background-color: transparent;
+	background-image: none;
+	box-shadow: none;
+}
+
+EvWindow .toolbar .linked .entry:last-child:insensitive {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (@toolbar_entry_top),
+                                     to (@toolbar_entry_bottom));
+	background-color: shade(@toolbar_bg_color, 0.99);
+    box-shadow: inset -1px  0px shade(@toolbar_bg_color, 0.6),
+				inset  0px  1px shade(@toolbar_bg_color, 0.6),
+				inset  0px -1px shade(@toolbar_bg_color, 0.7),
+				inset  0px 2px 2px alpha(@dark_shadow, 0.2);
+}
+
+EvWindow .toolbar .linked .entry:first-child:insensitive {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (@toolbar_entry_top),
+                                     to (@toolbar_entry_bottom));
+	background-color: shade(@toolbar_bg_color, 0.99);
+    box-shadow: inset  1px  0px shade(@toolbar_bg_color, 0.6),
+				inset -1px  0px shade(@toolbar_bg_color, 1.3),
+				inset  0px  1px shade(@toolbar_bg_color, 0.6),
+				inset  0px -1px shade(@toolbar_bg_color, 0.7),
+				inset  0px 2px 2px alpha(@dark_shadow, 0.2);
+}
+
+EvWindow .pane-separator, 
+EvWindow .pane-separator:hover {
+    border-width: 0px;
+	border-right-width: 1px;
+    border-style: solid;
+    border-color: black;
+    background-color: @dark_sidebar_bg;
+}
+
+EvWindow.background EvSidebar.vertical .frame {
+	border-width: 0px;
+}
+
+EvWindow.background EvSidebar.vertical .button {
+    border-color: @toolbar_button_border;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+    border-width: 1px;
+    background-color: shade(@toolbar_bg_color, 0.85);
+    border-radius: 4px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+    color: @toolbar_fg_color;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (@toolbar_button_top),
+                                     to (@toolbar_button_bottom));
+
+    box-shadow: inset  0px  2px shade(@toolbar_button_highlight, 1.05),
+				/*inset  0px -2px shade(@toolbar_button_bottom, 1.2),
+				inset  2px  0px shade(@toolbar_button_highlight, 0.8),
+				inset -2px  0px shade(@toolbar_button_highlight, 0.8),*/
+				inset  1px  0px shade(@toolbar_bg_color, 0.7),
+				inset -1px  0px shade(@toolbar_bg_color, 0.7),
+				inset  0px  1px shade(@toolbar_bg_color, 0.7),
+				inset  0px -1px shade(@toolbar_bg_color, 0.7);
+}
+EvWindow.background EvSidebar.vertical .button:hover {
+	color: @theme_selected_fg_color;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@toolbar_button_top, 1.2)),
+                                     to (shade(@toolbar_button_bottom, 1.0)));
+    box-shadow: inset  0px  2px shade(@toolbar_button_highlight, 1.2),
+				/*inset  0px  -2px shade(@toolbar_button_bg, 0.95),
+				inset  2px  0px shade(@toolbar_button_bg, 1.2),
+				inset -2px  0px shade(@toolbar_button_bg, 1.2),*/
+				inset  1px  0px shade(@toolbar_bg_color, 0.75),
+				inset -1px  0px shade(@toolbar_bg_color, 0.75),
+				inset  0px  1px shade(@toolbar_bg_color, 0.75),
+				inset  0px -1px shade(@toolbar_bg_color, 0.75);
+}
+
+EvWindow.background EvSidebar.vertical .button:active {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     to (shade(@toolbar_button_top, 0.8)),
+                                     from (shade(@toolbar_button_bottom, 0.8)));
+    box-shadow: inset  1px  0px shade(@toolbar_bg_color, 0.75),
+				inset -1px  0px shade(@toolbar_bg_color, 0.75),
+				inset  0px  1px shade(@toolbar_bg_color, 0.75),
+				inset  0px -1px shade(@toolbar_bg_color, 0.75),
+
+				inset  0px  1px 2px alpha(@dark_shadow, 0.5);
+}
+
+EvWindow.background EvSidebar.vertical .button:insensitive {
+	background-image: none;
+	background-color: shade(@toolbar_bg_color, 0.8);
+    box-shadow: inset  0px  1px shade(@toolbar_bg_color, 0.65),
+				inset  0px -1px shade(@toolbar_bg_color, 0.65),
+				inset  1px  0px shade(@toolbar_bg_color, 0.65),
+				inset -1px  0px shade(@toolbar_bg_color, 0.65);
+}
+
+EvWindow.background EvSidebar.vertical .view {
+    background-color: @dark_sidebar_bg;
+	border-color: shade(@theme_selected_bg_color, 0.7);
+	color: @toolbar_fg_color;
+}
+
+EvWindow.background EvSidebar.vertical .scrollbar.slider {
+	border-image: url("scrollbar-border-dark.svg") 5 3 5 4 / 5px 3px 5px 4px stretch;
+	background-image: -gtk-gradient(linear, left top, right top,
+                                     to (shade(@osd_scrollbar_slider, 1.2)),
+                                     from (shade(@osd_scrollbar_slider, 1.0)));
+}
+
+EvWindow.background EvSidebar.vertical .scrollbar.slider.vertical:hover {
+	border-image: url("scrollbar-border-hover-dark.svg") 5 3 5 4 / 5px 3px 5px 4px stretch;
+	background-image: -gtk-gradient(linear, left top, right top,
+                                     to (shade(@osd_scrollbar_slider, 1.4)),
+                                     from (shade(@osd_scrollbar_slider, 1.2)));
+}
+
+EvWindow.background EvSidebar.vertical .scrollbar.slider.vertical:active {
+	border-image: url("scrollbar-border-active-dark.svg") 5 3 5 4 / 5px 3px 5px 4px stretch;
+	background-image: -gtk-gradient(linear, left top, right top,
+                                     to (shade(@lighter_selected_bg, 1.0)),
+                                     from (shade(@theme_selected_bg_color, 1.0)));
+}
+
+EvWindow.background EvSidebar.vertical .scrollbar.slider.horizontal {
+	border-image: url("scrollbar-border-horizontal-dark.svg") 4 5 3 5 / 4px 5px 3px 5px stretch;
+	background-image: -gtk-gradient(linear, left top, left bottom,
+                                     to (shade(@osd_scrollbar_slider, 1.2)),
+                                     from (shade(@osd_scrollbar_slider, 1.0)));
+}
+
+EvWindow.background EvSidebar.vertical .scrollbar.slider.horizontal:hover {
+	border-image: url("scrollbar-border-horizontal-hover-dark.svg") 4 5 3 5 / 4px 5px 3px 5px stretch;
+	background-image: -gtk-gradient(linear, left top, left bottom,
+                                     to (shade(@osd_scrollbar_slider, 1.4)),
+                                     from (shade(@osd_scrollbar_slider, 1.2)));
+}
+
+EvWindow.background EvSidebar.vertical .scrollbar.slider.horizontal:active {
+	background-image: -gtk-gradient(linear, left top, left bottom,
+                                     to (shade(@lighter_selected_bg, 1.0)),
+                                     from (shade(@theme_selected_bg_color, 1.0)));
+	border-image: url("scrollbar-border-horizontal-active-dark.svg") 4 5 3 5 / 4px 5px 3px 5px stretch;
+}
+
+EvWindow.background EvSidebar.vertical .scrollbar.trough {
+	border-color: transparent;
+	border-radius: 20px;
+	background-color: transparent;
+	box-shadow: none;
+	background-image: none;
+}
+
+EvWindow.background EvSidebar.vertical .view row:selected,
+EvWindow.background EvSidebar.vertical .view row:selected:hover,
+EvWindow.background EvSidebar.vertical .view row:selected:focus {
+	border-width: 1px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from (shade(@theme_selected_bg_color, 1.1)),
+                                    to (shade(@theme_selected_bg_color, 0.9)));
+					
+    box-shadow: inset  0px  1px shade(@theme_selected_bg_color, 1.2),
+				inset  0px -1px shade(@theme_selected_bg_color, 1.0);
+    color: @theme_selected_fg_color;
+	text-shadow: 0px -1px alpha(@dark_shadow, 0.4);
+}
+
+EvWindow.background EvSidebar.vertical .notebook {
+	border-color: shade(@toolbar_bg_color, 0.6);
+	border-radius: 0;
+}
+
+EvWindow.background EvSidebar.vertical .notebook tab {
+	background-image: none;
+	background-color: shade(@dark_sidebar_bg, 0.85);
+	box-shadow: none;
+}
+
+EvWindow.background EvSidebar.vertical .notebook tab:active {
+	background-color: @dark_sidebar_bg;
+	border-image: none;
+	border-color: shade(@toolbar_bg_color, 0.6);
+}
+
+EvWindow.background EvSidebar.vertical .notebook tab GtkLabel {
+	color: @toolbar_fg_color;
+}
+
+/* gnome-documents */
+
+.documents-load-more.button {
+    border-image: none;
+    border-color: @borders;
+    border-width: 1px 0 0;
+    border-radius: 0;
+	box-shadow: none;
+}
+
+.documents-scrolledwin.frame {
+    border-width: 1px 0 0;
+    border-radius: 0;
+}
+
+.documents-counter {
+    background-image: url('assets/dnd-counter.svg');
+    background-size: contain;
+    background-color: transparent;
+    color: @theme_base_color;
+    font: bold;
+}
+
+.documents-favorite.button:active,
+.documents-favorite.button:active:hover {
+    color: shade(@theme_selected_bg_color, 1.20);
+}
+
+.documents-entry-tag {
+    background-color: @theme_selected_bg_color;
+    color: @toolbar_fg_color;
+
+    border-radius: 4px;
+    border-width: 0;
+
+    margin: 2px;
+    padding: 4px;
+}
+
+.documents-entry-tag:hover {
+	background-image: none;
+    background-color: shade(@theme_selected_bg_color, 1.10);
+    color: @entry_tag_fg;
+}
+
+.documents-entry-tag.button,
+.documents-entry-tag.button:hover,
+.documents-entry-tag.button:active,
+.documents-entry-tag.button:active:hover {
+    background-color: red;
+    border-image: none;
+    border-width: 0;
+	box-shadow: none;
+}
+
+.documents-entry-tag.button:hover {
+    color: shade(@theme_selected_bg_color, 1.0);
+}
+
+/* Gnome Contacts*/
+.contacts-left-header-bar:dir(ltr) {
+ border-right-width: 1px;
+}
+
+.contacts-left-header-bar:dir(rtl) {
+ border-left-width: 1px;
+}
+
+.contacts-left-header-bar:dir(ltr),
+.contacts-right-header-bar:dir(rtl) {
+  border-top-right-radius: 0;
+}
+
+.contacts-right-header-bar:dir(ltr),
+.contacts-left-header-bar:dir(rtl) {
+  border-top-left-radius: 0;
+}
+
+/* Baobab */
+.cell.baobab-level-cell,
+.cell.baobab-level-cell:hover,
+.cell.baobab-level-cell:selected,
+.cell.baobab-level-cell:selected:hover {
+    border-color: darker(@borders);
+    border-width: 1px;
+    border-radius: 3px;
+    border-style: solid;
+    background-color: white;
+	background-image: none;
+	box-shadow: none;
+}
+
+.cell.baobab-level-cell.fill-block,
+.cell.baobab-level-cell.fill-block:selected,
+.cell.baobab-level-cell.fill-block:selected:hover {
+    background-color: #edd400;
+}
+
+.cell.baobab-level-cell.fill-block.level-low,
+.cell.baobab-level-cell.fill-block.level-low:hover {
+    background-color: #73d216;
+}
+
+.cell.baobab-level-cell.fill-block.level-high,
+.cell.baobab-level-cell.fill-block.level-high:hover {
+    background-color: #cc0000;
+}
+
+.cell.baobab-cell-error {
+    color: @error_color;
+}
+
+.cell.baobab-cell-warning {
+    color: @warning_color;
+}
+
+.cell.baobab-cell-warning:selected,
+.cell.baobab-cell-error:selected {
+    color: @theme_selected_fg_color;
+}
+
+BaobabRingschart {
+    background-color: @theme_bg_color;
+    padding: 13px 13px 13px 13px;
+}
+
+BaobabRingschart.subfolder-tip {
+    border-radius: 3px;
+    border-style: none;
+    padding: 3px 3px 3px 3px;
+
+    background-color: alpha(@theme_tooltip_bg_color, 0.90);
+    color: @theme_tooltip_fg_color;
+
+    text-shadow: 1px 1px black;
+}
+
+
+/*Nemo*/
+NemoWindow .sidebar .view {
+	background-color: @dark_sidebar_bg;
+	color: @toolbar_fg_color;
+}
+
+NemoWindow .sidebar .frame {
+	border-right-width: 1px;
+	border-style: solid;
+	border-color: shade (@toolbar_bg_color, 0.6);
+	border-left: none;
+	border-top: none;
+	border-bottom: none;
+}
+
+NemoWindow .sidebar .view.cell:selected,
+NemoWindow .sidebar .view.cell:selected:hover,
+NemoWindow .sidebar .view.cell:selected:focus {
+	border-style: none;
+	/*background-image: url("arrow.png"),
+					  -gtk-gradient(linear, left top, left bottom,
+                                    from (shade(@theme_selected_bg_color, 1.1)),
+                                    to (shade(@theme_selected_bg_color, 0.9)));*/
+	background-position: top, bottom, right center;
+	background-repeat: repeat-x, repeat-x, repeat-x;
+    background-image: url("top.png"),
+					  url("bottom.png"),
+					  url("menu-selected.svg");
+    /*box-shadow: inset  0px  1px shade(@theme_selected_bg_color, 1.2),
+				inset  0px -1px shade(@theme_selected_bg_color, 1.0);*/
+	box-shadow: none;
+}
+
+NemoWindow * {
+	-GtkPaned-handle-size: 1px;
+}
+
+NemoView.frame,
+NemoNotebook.notebook {
+	border-right-width: 0;
+	border-left-width: 0;
+	border-bottom-width: 0;
+}
+
+NemoNotebook.notebook tab.top,
+NemoNotebook.notebook tab.bottom {
+	border-right-width: 1px;
+	border-left-width: 1px;
+}
+
+NemoNotebook .frame {
+	border-width: 1px 0 0 0;
+}
+
+NemoStatusBar GtkLabel {
+	text-shadow: none;
+}
+
+NemoStatusBar.toolbar .button {
+    transition: none;
+    border-width: 1px;
+    border-style: solid;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+    border-bottom-color: @button_shadow;
+    border-radius: 4px;
+    background-image: -gtk-gradient(linear, 1 0 ,1 1,
+										color-stop(0.4, @button_bg_top),
+										/*color-stop(0.51, shade(@theme_base_color, 0.95)),*/
+										color-stop(1, @button_bg_bottom));
+	box-shadow: inset  0px  1px @button_border,
+				inset  0px -1px shade(@button_border, 1.05),
+				inset  1px  0px @button_border,
+				inset -1px  0px @button_border;
+	color: @theme_fg_color;
+}
+
+NemoStatusBar.toolbar .button:hover {
+    background-image: -gtk-gradient(linear, 1 0 ,1 1,
+										color-stop(0.4, @button_bg_top),
+										color-stop(1, shade(@button_bg_bottom, 1.05)));
+	box-shadow: inset  0px  1px @button_border,
+				inset  0px -1px shade(@button_border, 1.05),
+				inset  1px  0px @button_border,
+				inset -1px  0px @button_border;
+	color: @theme_fg_color;
+}
+
+NemoStatusBar.toolbar .button:active:hover,
+NemoStatusBar.toolbar .button:active {
+	icon-shadow: none;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    to (shade(@button_bg_top, 0.98)),
+                                    from (shade(@button_bg_bottom, 0.90)));
+	box-shadow: inset  0px  -1px 3px alpha(@dark_shadow, 0.3),
+				inset  0px  1px shade(@button_border, 0.9),
+				inset  0px -1px shade(@button_border, 0.9),
+				inset  1px  0px shade(@button_border, 0.9),
+				inset -1px  0px shade(@button_border, 0.9);
+}
+
+NemoStatusBar.toolbar .scale.slider {
+    background-image: url("slider.svg");
+}
+
+NemoStatusBar.toolbar .scale.slider:hover {
+    background-image: url("slider_hover.svg");
+}
+
+NemoStatusBar.toolbar .scale.slider:active {
+    background-image: url("slider_active.svg");
+}
+
+NemoStatusBar.toolbar .scale.highlight.left {
+	border: 3px solid;
+	border-bottom-width: 4px;
+	border-radius: 5px;
+    background-color: @theme_selected_bg_color;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    to (shade(@lighter_selected_bg, 1.0)),
+                                    from (shade(@theme_selected_bg_color, 1.0)));
+	box-shadow: inset 0px -1px alpha(@light_shadow, 0.2);
+    border-image: url("slider_trough_highlight.svg") 3 5 4 5 / 3px 5px 4px 5px stretch;
+}
+
+NemoStatusBar.toolbar .scale.trough {
+    margin: 4px 0;
+	border: 1px solid transparent;
+	border-top-width: 0px;
+	border-bottom-color: @button_shadow;
+	border-radius: 5px;
+	background-image: none;
+	background-color: @theme_base_color;
+	box-shadow: inset 0px 1px 2px alpha(@dark_shadow, 0.2),
+				inset 0px 1px shade(@borders, 0.9),
+				inset 0px -1px shade(@borders, 0.9),
+				inset 1px 0px shade(@borders, 0.9),
+				inset -1px 0px shade(@borders, 0.9);
+}
+
+
+NemoPathbarButton {
+	text-shadow: none;
+
+    border-color: shade(@toolbar_bg_color, 0.6);
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (@toolbar_entry_top),
+                                     to (@toolbar_entry_bottom));
+    box-shadow:	inset  0px 2px 2px alpha(@dark_shadow, 0.2),
+				inset  0px -2px 1px alpha(@light_shadow, 0.08);
+	color: @toolbar_fg_color;
+}
+
+NemoPathbarButton:active {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@toolbar_entry_top,0.85)),
+                                     to (shade(@toolbar_entry_bottom, 0.85)));
+	color: shade(@theme_selected_bg_color, 1.5);
+}

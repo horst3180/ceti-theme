@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Ceti
+Comment=A nice theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Ceti
+MetacityTheme=Ceti
+ButtonLayout=:minimize,maximize,close

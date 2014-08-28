@@ -1,0 +1,15 @@
+.bottom-toolbar.toolbar .scale.slider {
+    background-image: url("slider_dark.svg");
+}
+
+.bottom-toolbar.toolbar .scale.slider:hover {
+    background-image: url("slider_hover_dark.svg");
+}
+
+.bottom-toolbar.toolbar .scale.slider:active {
+    background-image: url("slider_active_dark.svg");
+}
+
+.bottom-toolbar.toolbar .scale.highlight.left {
+    border-image: url("slider_trough_highlight_dark.svg") 3 5 4 5 / 3px 5px 4px 5px stretch;
+}
