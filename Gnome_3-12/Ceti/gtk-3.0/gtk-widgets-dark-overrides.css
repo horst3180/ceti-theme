@@ -177,6 +177,18 @@ row:selected:focus {
 	border-right-color: alpha(@light_shadow, 0.1);
 }
 
+.scrollbar.trough {
+    background-image: -gtk-gradient(linear, left top, right top,
+                                     to (shade(@scrollbar_trough_b, 1.0)),
+                                     from (shade(@scrollbar_trough_a, 0.8)));
+}
+
+.scrollbar.trough.horizontal {
+    background-image: -gtk-gradient(linear, left top, right bottom,
+                                     to (shade(@scrollbar_trough_b, 1.0)),
+                                     from (shade(@scrollbar_trough_a, 0.8)));
+}
+
 .header-bar .scale.trough,
 .primary-toolbar .scale.trough,
 .toolbar .scale.trough {
