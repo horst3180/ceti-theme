@@ -9,12 +9,11 @@
 Please search in the repositories of your distribution because the package names vary from distro to distro.
 
 
-
 ###########################
 #      Installation       #
 ###########################
 
-The extracted zip file contains three different subfolders ("Gnome_3-8", "Gnome_3-10" and "Gnome_3-12") with the GTK themes for the different versions of Gnome/GTK. Pick the one that matches your version and copy the contents to "/usr/share/themes".
+The extracted zip file contains three different subfolders ("Gnome_3-8_Ubuntu_13-10", "Gnome_3-10_Ubuntu_14-04" and "Gnome_3-12") with the GTK themes for the different versions of Gnome/GTK. Pick the one that matches your version and copy the contents to "/usr/share/themes".
 Note: there is currently no Gnome-Shell theme for Gnome 3.8.
 
 To set the theme, run the following commands in Terminal,
@@ -30,6 +29,17 @@ The above step is not necessary with Gnome 3.12!
 
 To install the Chrome/Chromium theme open the "Chrome" folder in the extracted archive and drag and drop the Ceti.crx file into the Chrome/Chromium window.
 
+
+#######################
+#   Troubleshooting   #
+#######################
+
+If you get black spaces under Unity, disable overlay scrollbars with
+
+gsettings set com.canonical.desktop.interface scrollbar-mode normal
+
+
+If the metacity theme doesn't show up in gnome-tweak-tool copy the theme folder with only the metacity theme inside to ~/.local/share/themes. Otherwise gnome-tweak-tool won't find the metacity theme. (This shouldn't happen if you copy the theme to /usr/share/themes)
 
 
 ######################
