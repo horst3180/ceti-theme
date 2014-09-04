@@ -14,21 +14,10 @@
    height="15"
    id="svg4306"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="close_pressed.svg">
   <defs
      id="defs4308">
-    <linearGradient
-       id="linearGradient4892">
-      <stop
-         style="stop-color:#2f3a42;stop-opacity:1;"
-         offset="0"
-         id="stop4894" />
-      <stop
-         style="stop-color:#1d242a;stop-opacity:1;"
-         offset="1"
-         id="stop4896" />
-    </linearGradient>
     <linearGradient
        id="linearGradient4882">
       <stop
@@ -48,41 +37,6 @@
        y1="16"
        x2="8"
        y2="8"
-       gradientUnits="userSpaceOnUse" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5031"
-       id="radialGradient5037"
-       cx="8"
-       cy="8"
-       fx="8"
-       fy="8"
-       r="6"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       id="linearGradient5031">
-      <stop
-         style="stop-color:#000000;stop-opacity:0;"
-         offset="0"
-         id="stop5033" />
-      <stop
-         id="stop5039"
-         offset="1"
-         style="stop-color:#ff1515;stop-opacity:1;" />
-      <stop
-         style="stop-color:#ff1b1b;stop-opacity:1"
-         offset="1"
-         id="stop5035" />
-    </linearGradient>
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4892-8"
-       id="radialGradient4900-0"
-       cx="8"
-       cy="8"
-       fx="8"
-       fy="8"
-       r="6"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
        id="linearGradient4892-8">

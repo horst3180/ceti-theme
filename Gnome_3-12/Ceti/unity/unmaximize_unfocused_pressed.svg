@@ -15,20 +15,9 @@
    id="svg4306"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="maximize_focused_pressed.svg">
+   sodipodi:docname="unmaximize_unfocused_pressed.svg">
   <defs
      id="defs4308">
-    <linearGradient
-       id="linearGradient4892">
-      <stop
-         style="stop-color:#2f3a42;stop-opacity:1;"
-         offset="0"
-         id="stop4894" />
-      <stop
-         style="stop-color:#1d242a;stop-opacity:1;"
-         offset="1"
-         id="stop4896" />
-    </linearGradient>
     <linearGradient
        id="linearGradient4882">
       <stop
@@ -48,38 +37,6 @@
        y1="16"
        x2="8"
        y2="8"
-       gradientUnits="userSpaceOnUse" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3943"
-       id="radialGradient3949"
-       cx="8"
-       cy="8"
-       fx="8"
-       fy="8"
-       r="7"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient3943">
-      <stop
-         style="stop-color:#1787dc;stop-opacity:1;"
-         offset="0"
-         id="stop3945" />
-      <stop
-         style="stop-color:#1787dc;stop-opacity:0;"
-         offset="1"
-         id="stop3947" />
-    </linearGradient>
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4892-3"
-       id="radialGradient4900-0"
-       cx="8"
-       cy="8"
-       fx="8"
-       fy="8"
-       r="6"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
        id="linearGradient4892-3">
@@ -148,7 +105,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>

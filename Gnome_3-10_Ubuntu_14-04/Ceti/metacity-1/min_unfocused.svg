@@ -14,8 +14,8 @@
    height="16"
    id="svg4306"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="min.svg">
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="min_unfocused.svg">
   <defs
      id="defs4308">
     <linearGradient
@@ -59,28 +59,6 @@
        fy="8"
        r="6"
        gradientUnits="userSpaceOnUse" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3943"
-       id="radialGradient3949"
-       cx="8"
-       cy="8"
-       fx="8"
-       fy="8"
-       r="7"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient3943">
-      <stop
-         style="stop-color:#1787dc;stop-opacity:1;"
-         offset="0"
-         id="stop3945" />
-      <stop
-         style="stop-color:#1787dc;stop-opacity:0;"
-         offset="1"
-         id="stop3947" />
-    </linearGradient>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -127,7 +105,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>

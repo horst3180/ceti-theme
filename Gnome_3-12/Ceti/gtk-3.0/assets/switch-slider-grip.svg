@@ -13,8 +13,8 @@
    height="8"
    id="svg4584"
    version="1.1"
-   inkscape:version="0.48.2 r9819"
-   sodipodi:docname="switch-slider-grip-dark.svg">
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="switch-slider-grip.svg">
   <defs
      id="defs4586" />
   <sodipodi:namedview
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>

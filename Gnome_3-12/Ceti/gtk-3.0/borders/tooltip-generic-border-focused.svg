@@ -7,49 +7,16 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    height="16px"
    width="16px"
    version="1.1"
    id="svg2"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="tooltip-generic-border-focused.svg">
   <defs
-     id="defs12">
-    <linearGradient
-       id="linearGradient3006">
-      <stop
-         id="stop3008"
-         offset="0"
-         style="stop-color:#729fcf;stop-opacity:1" />
-      <stop
-         id="stop3010"
-         offset="1"
-         style="stop-color:#9ebdde;stop-opacity:1;" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3845"
-       id="linearGradient3851"
-       x1="8.0000019"
-       y1="1.5371597"
-       x2="8.000001"
-       y2="13.462841"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       id="linearGradient3845">
-      <stop
-         style="stop-color:#b2b6b2;stop-opacity:1"
-         offset="0"
-         id="stop3847" />
-      <stop
-         style="stop-color:#bdbfbd;stop-opacity:1"
-         offset="1"
-         id="stop3849" />
-    </linearGradient>
-  </defs>
+     id="defs12" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"

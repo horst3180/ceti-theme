@@ -14,8 +14,8 @@
    height="12"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="scrollbar-border-horizontal.svg">
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="scrollbar-border-horizontal-hover.svg">
   <defs
      id="defs4">
     <linearGradient
@@ -74,7 +74,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>

@@ -7,14 +7,13 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="108"
    height="108"
    id="svg7355"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="running-indicator.svg">
   <metadata
      id="metadata4175">
@@ -58,60 +57,7 @@
        originy="3px" />
   </sodipodi:namedview>
   <defs
-     id="defs7357">
-    <radialGradient
-       xlink:href="#linearGradient36429"
-       id="radialGradient7461"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.011539,0,0,0.57582113,-0.39262194,71.83807)"
-       cx="47.428951"
-       cy="167.16817"
-       fx="47.428951"
-       fy="167.16817"
-       r="37" />
-    <linearGradient
-       id="linearGradient36429">
-      <stop
-         id="stop36431"
-         offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
-      <stop
-         id="stop36433"
-         offset="1"
-         style="stop-color:#ffffff;stop-opacity:0;" />
-    </linearGradient>
-    <radialGradient
-       xlink:href="#linearGradient36471"
-       id="radialGradient7463"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.1891549,0,0,0.55513246,-9.281289,36.12653)"
-       cx="49.067139"
-       cy="242.50381"
-       fx="49.067139"
-       fy="242.50381"
-       r="37.00671" />
-    <linearGradient
-       id="linearGradient36471">
-      <stop
-         id="stop36473"
-         offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
-      <stop
-         id="stop36475"
-         offset="1"
-         style="stop-color:#ffffff;stop-opacity:0;" />
-    </linearGradient>
-    <radialGradient
-       r="37.00671"
-       fy="242.50381"
-       fx="49.067139"
-       cy="242.50381"
-       cx="49.067139"
-       gradientTransform="matrix(1.1891549,0,0,0.15252127,-9.281289,132.52772)"
-       gradientUnits="userSpaceOnUse"
-       id="radialGradient7488"
-       xlink:href="#linearGradient36471" />
-  </defs>
+     id="defs7357" />
   <g
      id="layer1"
      transform="matrix(1.6213276,0,0,1.6213276,-431.6347,-284.55274)">

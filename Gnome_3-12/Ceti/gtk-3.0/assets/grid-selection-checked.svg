@@ -14,7 +14,7 @@
    height="40"
    id="svg5038"
    version="1.1"
-   inkscape:version="0.48.2 r9819"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="grid-selection-checked.svg">
   <defs
      id="defs5040">
@@ -42,10 +42,6 @@
     <inkscape:path-effect
        effect="spiro"
        id="path-effect5837"
-       is_visible="true" />
-    <inkscape:path-effect
-       effect="spiro"
-       id="path-effect5012"
        is_visible="true" />
     <inkscape:path-effect
        effect="spiro"
@@ -95,16 +91,6 @@
          offset="1"
          id="stop10336-29-3-4" />
     </linearGradient>
-    <linearGradient
-       y2="1106.5294"
-       x2="808"
-       y1="1040.7369"
-       x1="806.39526"
-       gradientTransform="matrix(0.04728153,0,0,0.52063887,144.29163,-314.78125)"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient5726"
-       xlink:href="#linearGradient85841-7-0"
-       inkscape:collect="always" />
     <linearGradient
        inkscape:collect="always"
        id="linearGradient85841-7-0">

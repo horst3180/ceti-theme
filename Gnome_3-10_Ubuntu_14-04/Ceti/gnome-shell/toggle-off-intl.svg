@@ -13,25 +13,10 @@
    height="22"
    id="svg3273"
    version="1.1"
-   inkscape:version="0.47 r22583"
-   sodipodi:docname="New document 14">
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="toggle-off-intl.svg">
   <defs
-     id="defs3275">
-    <inkscape:perspective
-       sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 526.18109 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="744.09448 : 526.18109 : 1"
-       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
-       id="perspective3281" />
-    <inkscape:perspective
-       id="perspective3261"
-       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-       inkscape:vp_z="1 : 0.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_x="0 : 0.5 : 1"
-       sodipodi:type="inkscape:persp3d" />
-  </defs>
+     id="defs3275" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -58,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>

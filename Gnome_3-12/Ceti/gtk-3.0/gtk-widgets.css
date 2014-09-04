@@ -3706,7 +3706,7 @@ GtkModelButton.button:selected {
     border-style: solid;
     border-color: shade(@toolbar_bg_color, 0.6);
     text-shadow: 0 1px @wm_title_shadow;
-	background-image: -gtk-gradient(linear, 1 0 ,1 1,
+	  background-image: -gtk-gradient(linear, 1 0 ,1 1,
 										color-stop(0.25, shade(@toolbar_bg_color, 1.1)),
 										color-stop(0.25, shade(@toolbar_bg_color, 1.0)),
 										color-stop(1, shade(@toolbar_bg_color, 0.95)));

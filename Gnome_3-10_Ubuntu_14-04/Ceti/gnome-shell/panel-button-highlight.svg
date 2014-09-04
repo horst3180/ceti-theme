@@ -14,7 +14,7 @@
    height="25"
    id="svg10621"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="panel-button-highlight.svg">
   <defs
      id="defs10623">
@@ -43,29 +43,6 @@
          style="stop-color:#0081ff;stop-opacity:0;"
          offset="1"
          id="stop3764" />
-    </linearGradient>
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient34508-1-3"
-       id="radialGradient99561-1"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.72146227,0,0,0.27484277,14.205424,21.754717)"
-       cx="51"
-       cy="30"
-       fx="51"
-       fy="30"
-       r="42" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient34508-1-3">
-      <stop
-         style="stop-color:#ffffff;stop-opacity:1;"
-         offset="0"
-         id="stop34510-1-9" />
-      <stop
-         style="stop-color:#ffffff;stop-opacity:0;"
-         offset="1"
-         id="stop34512-4-5" />
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
@@ -126,7 +103,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>

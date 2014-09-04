@@ -15,7 +15,7 @@
    id="svg4306"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="close_focused_prelight.svg">
+   sodipodi:docname="close_unfocused_prelight.svg">
   <defs
      id="defs4308">
     <linearGradient
@@ -53,16 +53,6 @@
        inkscape:collect="always"
        xlink:href="#linearGradient4892"
        id="radialGradient4900"
-       cx="8"
-       cy="8"
-       fx="8"
-       fy="8"
-       r="6"
-       gradientUnits="userSpaceOnUse" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5031"
-       id="radialGradient5037"
        cx="8"
        cy="8"
        fx="8"
@@ -139,7 +129,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>

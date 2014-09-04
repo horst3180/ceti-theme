@@ -14,7 +14,7 @@
    height="16px"
    id="svg33222"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="primary-toolbar-button-border-dark.svg">
   <defs
      id="defs33224">
@@ -60,26 +60,6 @@
        id="linearGradient3880"
        xlink:href="#linearGradient3826-9"
        inkscape:collect="always" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3758"
-       id="linearGradient3764"
-       x1="8"
-       y1="0"
-       x2="8"
-       y2="15"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       id="linearGradient3758">
-      <stop
-         style="stop-color:#1b2021;stop-opacity:1;"
-         offset="0"
-         id="stop3760" />
-      <stop
-         style="stop-color:#24282a;stop-opacity:1"
-         offset="1"
-         id="stop3762" />
-    </linearGradient>
   </defs>
   <sodipodi:namedview
      id="base"

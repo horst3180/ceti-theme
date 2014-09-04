@@ -12,7 +12,7 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.48.5 r10040"
    width="228"
    height="32"
    sodipodi:docname="terminal_tab.svg">
@@ -40,38 +40,6 @@
          style="stop-color:#000000;stop-opacity:0;"
          offset="1"
          id="stop3783" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient3784">
-      <stop
-         style="stop-color:#000000;stop-opacity:0.21808511;"
-         offset="0"
-         id="stop3786" />
-      <stop
-         style="stop-color:#2b2b2b;stop-opacity:0;"
-         offset="1"
-         id="stop3788" />
-    </linearGradient>
-    <linearGradient
-       gradientTransform="matrix(0.26298958,0,0,1,-201.93125,737.39859)"
-       inkscape:collect="always"
-       xlink:href="#linearGradient3784-5"
-       id="linearGradient3790-0"
-       x1="1320"
-       y1="301"
-       x2="1320"
-       y2="310"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       id="linearGradient3784-5">
-      <stop
-         style="stop-color:#000000;stop-opacity:0.21808511;"
-         offset="0"
-         id="stop3786-7" />
-      <stop
-         style="stop-color:#2b2b2b;stop-opacity:0;"
-         offset="1"
-         id="stop3788-2" />
     </linearGradient>
     <linearGradient
        inkscape:collect="always"

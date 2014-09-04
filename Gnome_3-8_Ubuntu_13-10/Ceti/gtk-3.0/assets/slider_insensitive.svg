@@ -7,7 +7,6 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="14"
@@ -17,65 +16,7 @@
    inkscape:version="0.48.5 r10040"
    sodipodi:docname="slider_insensitive.svg">
   <defs
-     id="defs2987">
-    <linearGradient
-       id="linearGradient3814">
-      <stop
-         style="stop-color:#64676c;stop-opacity:1;"
-         offset="0"
-         id="stop3816" />
-      <stop
-         style="stop-color:#aeb0b4;stop-opacity:1;"
-         offset="1"
-         id="stop3818" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient3806">
-      <stop
-         style="stop-color:#000000;stop-opacity:0.513089;"
-         offset="0"
-         id="stop3808" />
-      <stop
-         style="stop-color:#000000;stop-opacity:0.59215689;"
-         offset="1"
-         id="stop3810" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient3773">
-      <stop
-         style="stop-color:#fcfcfc;stop-opacity:1;"
-         offset="0"
-         id="stop3775" />
-      <stop
-         id="stop3769"
-         offset="0.5"
-         style="stop-color:#f9f9fb;stop-opacity:1;" />
-      <stop
-         style="stop-color:#dcdce0;stop-opacity:1;"
-         offset="1"
-         id="stop3777" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3806-1"
-       id="linearGradient3812-2"
-       x1="8"
-       y1="10"
-       x2="8"
-       y2="8"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       id="linearGradient3806-1">
-      <stop
-         style="stop-color:#3e90d4;stop-opacity:1;"
-         offset="0"
-         id="stop3808-3" />
-      <stop
-         style="stop-color:#2468a0;stop-opacity:1;"
-         offset="1"
-         id="stop3810-9" />
-    </linearGradient>
-  </defs>
+     id="defs2987" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
