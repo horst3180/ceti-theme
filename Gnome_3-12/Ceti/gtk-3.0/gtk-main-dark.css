@@ -191,5 +191,6 @@
 @import url("gnome-applications.css");
 @import url("gnome-applications-dark-overrides.css");
 @import url("unity.css");
+@import url("tabs.css");
 @import url("tabs-dark.css");
 @import url("window-controls.css");
