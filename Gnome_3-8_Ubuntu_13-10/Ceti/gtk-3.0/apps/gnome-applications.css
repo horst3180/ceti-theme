@@ -107,19 +107,14 @@ NautilusWindow .sidebar .view.cell:selected,
 NautilusWindow .sidebar .view.cell:selected:hover,
 NautilusWindow .sidebar .view.cell:selected:focus {
 	border-style: none;
-	/*background-image: url("arrow.png"),
-					  -gtk-gradient(linear, left top, left bottom,
-                                    from (shade(@theme_selected_bg_color, 1.1)),
-                                    to (shade(@theme_selected_bg_color, 0.9)));*/
-	background-position: right center, right center, top, bottom, right center;
-	background-repeat: no-repeat, no-repeat, repeat-x, repeat-x, repeat-x;
-    background-image: url("arrow.png"),
-					  url("border.png"),
-					  url("top.png"),
-					  url("bottom.png"),
-					  url("menu-selected.svg");
-    /*box-shadow: inset  0px  1px shade(@theme_selected_bg_color, 1.2),
-				inset  0px -1px shade(@theme_selected_bg_color, 1.0);*/
+  	background-image: url("arrow.png"),
+                    linear-gradient(to left, shade(@toolbar_bg_color, 0.6) 1px, transparent 1px),
+                    linear-gradient(to bottom, #51A0E0 1px, transparent 1px),
+                    linear-gradient(to top, #2A6DA6 1px, transparent 1px),
+                    linear-gradient(to bottom, #4286be, #236499);
+                    
+	background-position: right center;
+	background-repeat: no-repeat;
 	box-shadow: none;
 }
 

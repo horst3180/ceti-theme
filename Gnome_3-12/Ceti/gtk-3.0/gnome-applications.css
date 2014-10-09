@@ -81,7 +81,7 @@ TerminalWindow .scrollbar.slider.vertical:active {
  */
 
 .nautilus-canvas-item {
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .nautilus-desktop.nautilus-canvas-item {
@@ -119,13 +119,14 @@ NautilusWindow .sidebar .view.cell:selected,
 NautilusWindow .sidebar .view.cell:selected:hover,
 NautilusWindow .sidebar .view.cell:selected:focus {
 	border-style: none;
-	background-position: right center, right center, top, bottom, right center;
-	background-repeat: no-repeat, no-repeat, repeat-x, repeat-x, repeat-x;
-    background-image: url("apps-assets/arrow.png"),
-					  url("apps-assets/border.png"),
-					  url("apps-assets/top.png"),
-					  url("apps-assets/bottom.png"),
-					  url("apps-assets/menu-selected.svg");
+  	background-image: url("apps-assets/arrow.png"),
+                    linear-gradient(to left, shade(@toolbar_bg_color, 0.6) 1px, transparent 1px),
+                    linear-gradient(to bottom, #51A0E0 1px, transparent 1px),
+                    linear-gradient(to top, #2A6DA6 1px, transparent 1px),
+                    linear-gradient(to bottom, #4286be, #236499);
+                    
+	background-position: right center;
+	background-repeat: no-repeat;
 	box-shadow: none;
 	color: @theme_selected_fg_color;
 }
