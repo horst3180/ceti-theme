@@ -2387,8 +2387,9 @@ GtkMenuButton .menu {
  * Header bars *
  ***************/
 .header-bar {
-    border-width: 0;
+    border-width: 0 0 1px 0;
     background-color: @toolbar_bg_color;
+	border-color: shade(@toolbar_bg_color, 0.6);
 	color: @toolbar_fg_color;
     /*padding: 6px 6px 5px 6px;*/
     padding: 5px 5px 4px 5px;

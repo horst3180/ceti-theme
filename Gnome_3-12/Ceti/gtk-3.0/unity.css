@@ -1,3 +1,57 @@
+UnityDecoration {
+    -UnityDecoration-extents: 28px 1 1 1;
+    -UnityDecoration-input-extents: 10px;
+
+    -UnityDecoration-shadow-offset-x: 1px;
+    -UnityDecoration-shadow-offset-y: 5px;
+    -UnityDecoration-active-shadow-color: rgba (0, 0, 0, 0.75);
+    -UnityDecoration-active-shadow-radius: 30px;
+    -UnityDecoration-inactive-shadow-color: rgba (0, 0, 0, 0.3);
+    -UnityDecoration-inactive-shadow-radius: 25px;
+
+    -UnityDecoration-glow-size: 10px;
+    -UnityDecoration-glow-color: rgb (36, 104, 160);
+
+    -UnityDecoration-title-indent: 10px;
+    -UnityDecoration-title-fade: 35px;
+    -UnityDecoration-title-alignment: 0.0;
+}
+
+/* This will theme the top decoration, so the whole space above the window */
+UnityDecoration.top {
+	border: 1px solid shade(@wm_border_focused, 0.5);
+	border-bottom-width: 0;
+	border-radius: 3px 3px 0 0; /* Corner radius, only the top ones should be */
+	padding: 1px 5px 0 5px; /* This padding will be applied to the content of the top layout */
+    	background-clip: border-box;
+	background-color: @wm_bg; /* Decoration background */
+	background-image: -gtk-gradient(linear, 1 0 ,1 1,
+										color-stop(0.5, shade(@toolbar_bg_color, 1.1)),
+										color-stop(0.5, shade(@toolbar_bg_color, 1.0)));
+	color: @toolbar_fg_color; /* The foreground color will be used to paint the text */
+	/*text-shadow: 0 1px @wm_title_shadow;*/
+	box-shadow: inset 0 1px shade(@wm_bg, 1.4);
+}
+
+/* Top decoration for inactive windows */
+UnityDecoration.top:backdrop {
+	border: 1px solid @wm_border_focused;
+	border-bottom-width: 0;
+  	background-clip: border-box;
+	background-color: @wm_bg;
+	color: alpha(@toolbar_fg_color, 0.7);
+}
+
+UnityDecoration.left,
+UnityDecoration.right,
+UnityDecoration.bottom,
+UnityDecoration.left:backdrop,
+UnityDecoration.right:backdrop,
+UnityDecoration.bottom:backdrop {
+	background-color: @wm_border_focused;
+	background-image: none;
+}
+
 UnityPanelWidget,
 .unity-panel {
 	border-width: 0 0 1px 0;
@@ -28,43 +82,4 @@ UnityPanelWidget,
 		shade (@theme_selected_bg_color, 1.15));
 	color: @theme_selected_fg_color;
 	/*text-shadow: 0 -1px alpha(black, 0.3);*/
-}
-
-/* This will theme the top decoration, so the whole space above the window */
-UnityDecoration.top {
-	border: 1px solid shade(@wm_border_focused, 0.5);
-	border-bottom-width: 0;
-	border-radius: 3px 3px 0 0; /* Corner radius, only the top ones should be */
-	padding: 1px 5px 0 5px; /* This padding will be applied to the content of the top layout */
-	background-color: @wm_bg; /* Decoration background */
-	background-image: -gtk-gradient(linear, 1 0 ,1 1,
-										color-stop(0.5, shade(@toolbar_bg_color, 1.1)),
-										color-stop(0.5, shade(@toolbar_bg_color, 1.0)));
-	color: @toolbar_fg_color; /* The foreground color will be used to paint the text */
-	/*text-shadow: 0 1px @wm_title_shadow;*/
-	box-shadow: inset 0 1px shade(@wm_bg, 1.4);
-}
-
-/* Top decoration for inactive windows */
-UnityDecoration.top:backdrop {
-	border: 1px solid @wm_border_unfocused;
-	border-bottom-width: 0;
-	background-color: @wm_bg;
-	color: alpha(@toolbar_fg_color, 0.7);
-}
-
-/* Left decoration, it themes only the space at the left of the window */
-UnityDecoration.left,
-/* Right decoration, it themes only the space at the right of the window */
-UnityDecoration.right,
-/* Bottom decoration, it themes all the space below the window */
-UnityDecoration.bottom {
-	background-color: @wm_border_focused;
-}
-
-/* Left, right and bottom decorations themes for inactive windows */
-UnityDecoration.left:backdrop,
-UnityDecoration.right:backdrop,
-UnityDecoration.bottom:backdrop {
-	background-color: @wm_border_unfocused;
 }
