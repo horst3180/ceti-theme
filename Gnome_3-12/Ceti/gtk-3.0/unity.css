@@ -35,7 +35,7 @@ UnityDecoration.top {
 
 /* Top decoration for inactive windows */
 UnityDecoration.top:backdrop {
-	border: 1px solid @wm_border_focused;
+	border: 1px solid shade(@wm_border_focused, 0.5);
 	border-bottom-width: 0;
   	background-clip: border-box;
 	background-color: @wm_bg;
@@ -48,7 +48,7 @@ UnityDecoration.bottom,
 UnityDecoration.left:backdrop,
 UnityDecoration.right:backdrop,
 UnityDecoration.bottom:backdrop {
-	background-color: @wm_border_focused;
+	background-color: shade(@wm_border_focused, 0.5);
 	background-image: none;
 }
 
